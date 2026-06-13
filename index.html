@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilox.css">
+    <script src="./script_tajertas.js" defer></script>
+    <title>Generador de Tarjetas</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="styencabe">Registro de datos</h1>
+    
+    <form id="cardForm" class="sidebar">
+        <h2 class="styencabe">Generador de Tarjetas de Perfil</h2>
+
+        <label for="inputName"><strong>Nombre: </strong></label>
+        <input type="text" id="inputName" name="nombre" placeholder="Tu nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}" required> 
+        <br><br>
+        
+        <label for="inputApellido"><strong>Apellido: </strong></label>
+        <input type="text" id="inputApellido" name="apellido" placeholder="Tu apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}" required> 
+        <br><br>
+        
+        <label for="inputCargo"><strong>Cargo:</strong></label>
+        <input type="text" id="inputCargo" name="cargo" placeholder="Ej: Profesor de Física">
+        <br><br>
+
+        <label for="inputColorFavorito"><strong>Color Favorito:</strong></label>
+        <input type="color" id="inputColorFavorito" value="#000000"> 
+        <br><br>
+
+        <label for="inputAvatar"><strong>Imagen de Perfil:</strong></label>
+        <input type="file" id="inputAvatar" accept="image/*">
+        <br><br>
+    
+	<div class="contenedor-boton">
+              <button type="button" id="btnGenerar">Generar Tarjeta</button>
+               </div>
+</form>
+            <div class="preview-zone">
+            <div class="card" id="previewCard">
+            <div class="card-header" id="cardHeader"></div>
+            <img id="cardAvatar" src="direccion.com" alt="Avatar">
+            <h3 id="cardName">Tu nombre y apellido...</h3>
+            <h4 id="cardCargo"><strong>Tu cargo...</strong></h4>
+        </div>
+    </div>
+
+</div>
+              <div class="galeria-seccion">
+
+              <h2>Galería de Tarjetas</h2>
+
+              <div id="galeriaContenedor" class="galeria-grid">
+</div>
+
+</div>
+<footer><p class="footycss">© 2026 - Generador de Tarjetas de Perfil</p></footer>
+
+</body>
+</html>
